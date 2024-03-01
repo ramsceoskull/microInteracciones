@@ -1,0 +1,16 @@
+.heart {
+  margin: 250px auto;
+  background-image: url('../src/sprite-Twitter.png');
+  cursor: pointer;
+  height: 100px;
+  width: 100px;
+}
+
+.heart-animation {
+  animation: heart-beat .8s steps(28, start) 1 forwards;
+}
+
+@keyframes heart-beat {
+  from { background-position: left; }
+  to { background-position: right; }
+}

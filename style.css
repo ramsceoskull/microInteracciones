@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap');
+
+:root {
+  --background: #15202B;
+  --border: #39444D;
+  --text: #8899A6;
+}
+
+body {
+  background: var(--background);
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+}
+
+section {
+  background: var(--background);
+  border: 1px solid var(--border);
+  display: flex;
+  margin: 20px;
+  max-width: 600px;
+  padding: 5px 8px 0;
+}
+
+section img:first-child {
+  border-radius: 50%;
+  height: 50px;
+  margin: 10px 0 0 10px;
+  width: 50px;
+}
+
+section > div {
+  width: 100%;
+}
+
+section > div > div {
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+}
+
+section svg:nth-child(1) {
+  padding: 17px 0 0 10px;
+}
+section svg:nth-child(2) {
+  padding: 15px 0 0 10px;
+}
+section svg:nth-child(4) {
+  padding: 14px 0 0;
+}
+
+section > svg:last-child {
+  margin-right: 10px;
+  transform: rotate(90deg);
+}
+
+p > span:first-child {
+  color: white;
+  font-weight: bold;
+}
+p > span:last-child {
+  color: var(--text);
+  font-weight: 300;
+}
+
+p {
+  color: white;
+  font-weight: 300;
+  margin: 10px;
+}
+
+.heart {
+  background-image: url('./src/sprite-Twitter.png');
+  background-size: auto 50px;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+}
+
+.heart-animation {
+  animation: heart-beat .8s steps(28, start) 1 forwards;
+}
+
+@keyframes heart-beat {
+  from { background-position: left; }
+  to { background-position: right; }
+}
